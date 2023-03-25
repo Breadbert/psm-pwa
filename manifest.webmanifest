@@ -1,0 +1,22 @@
+{
+    "name": "Breadbert PWA",
+    "short_name": "PWA",
+    
+    "description": "Github Page as a Progressive Web App",
+   
+    "scope": "/breadbert/",
+    "start_url": "/breadbert/",
+   
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+   
+    "display": "standalone", 
+   
+    "icons": [
+        {
+          "src": "/breadbert/img/logo.png",
+          "type": "image/png",
+          "sizes": "225x225"
+        }
+    ]
+  }
