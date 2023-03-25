@@ -1,22 +1,16 @@
 {
-    "name": "Breadbert PWA",
-    "short_name": "PWA",
-    
-    "description": "Github Page as a Progressive Web App",
-   
-    "scope": "/psm-pwa/",
-    "start_url": "/psm-pwa/",
-   
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
-   
-    "display": "standalone", 
-   
-    "icons": [
-        {
-          "src": "/psm-pwa/logo.png",
-          "type": "image/png",
-          "sizes": "225x225"
-        }
-    ]
-  }
+  "name": "PSM-PWA",
+  "short_name": "PSM-PWA",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "blue",
+  "theme_color": "blue",
+  "description": "Map and SOS",
+  "icons": [
+      {
+          "src": "icon.png",
+          "sizes": "225x225",
+          "type": "image/png"
+      }
+   ]
+}
