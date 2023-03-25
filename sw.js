@@ -1,5 +1,5 @@
 // Change this to your repository name
-var GHPATH = '/breadbert';
+var GHPATH = '/psm-pwa';
  
 // Choose a different app prefix name
 var APP_PREFIX = 'PWA';

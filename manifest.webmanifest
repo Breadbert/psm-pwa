@@ -4,8 +4,8 @@
     
     "description": "Github Page as a Progressive Web App",
    
-    "scope": "/breadbert/",
-    "start_url": "/breadbert/",
+    "scope": "/psm-pwa/",
+    "start_url": "/psm-pwa/",
    
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
@@ -14,7 +14,7 @@
    
     "icons": [
         {
-          "src": "/breadbert/img/logo.png",
+          "src": "/psm-pwa/logo.png",
           "type": "image/png",
           "sizes": "225x225"
         }
