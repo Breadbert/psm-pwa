@@ -1,6 +1,6 @@
 {
-  "name": "PSM-PWA",
-  "short_name": "PSM-PWA",
+  "name": "psm-pwa",
+  "short_name": "psm-pwa",
   "start_url": "./",
   "display": "standalone",
   "background_color": "blue",
@@ -8,7 +8,7 @@
   "description": "Map and SOS",
   "icons": [
       {
-          "src": "icon.png",
+          "src": "logo.png",
           "sizes": "225x225",
           "type": "image/png"
       }
