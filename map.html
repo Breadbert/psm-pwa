@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <title>Leaflet sample</title>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+      <style>
+        #map { height: 900px; }
+      </style>
    </head>
-   
    <body>
+      <div id="map"></div>
       
-   </body>
+
+    </body>
+   
+   <script>
+   
+   var map = L.map('map');
+    map.setView([50.06914, 19.9547], 17);
+    
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 17,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    navigator.geolocation.getCurrentPosition(success, error);
+
+    function success(pos){
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.latitude;
+        const accuracy = pos.coords.accuracy;
+
+        let marker = L.marker([lat, lng]).addTo(map);
+        let circle = L.circle([lat, lng], {radius: accuracy }).addTo(map);
+
+        map.fitBounds(circle.getBounds());
+
+    }
+
+    function error(err){
+        if (err.code === 1) {
+            alert("Proszę zezwolić na udostępnienie lokalizacji");
+        } else {
+            alert("Nie można ustalić aktualnej lokalizacji");
+        }
+    }
+
+    
+   
+   </script>
+   
 </html>
