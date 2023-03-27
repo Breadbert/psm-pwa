@@ -6,12 +6,12 @@ const VIBRATION_PATTERN = [SHORT_VIBRATION,NO_VIBRATION,SHORT_VIBRATION,NO_VIBRA
                             NO_VIBRATION,LONG_VIBRATION,NO_VIBRATION,LONG_VIBRATION,NO_VIBRATION,LONG_VIBRATION,
                             NO_VIBRATION,SHORT_VIBRATION,NO_VIBRATION,SHORT_VIBRATION,NO_VIBRATION,SHORT_VIBRATION,]
 
-const sosButtonClickHandler = () => {
-    vibrate.addEventListener('pointerdown', event => {
-        navigator.vibrate(VIBRATION_PATTERN);
-    });
-}
 
-// const sosButtonClickHandler = () => {
-//     navigator.vibrate(VIBRATION_PATTERN)
-// }
+
+const sosButtonClickHandler = () => {
+    if (navigator.userActivation.hasBeenActive) {
+        navigator.vibrate(VIBRATION_PATTERN)
+    } else {
+        console.log("activation needed")
+    }
+}
