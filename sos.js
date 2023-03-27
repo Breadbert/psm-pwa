@@ -7,10 +7,6 @@ const VIBRATION_PATTERN = [SHORT_VIBRATION,NO_VIBRATION,SHORT_VIBRATION,NO_VIBRA
 
 
 
-const sosButtonClickHandler = () => {
-    if (navigator.userActivation.hasBeenActive) {
-        navigator.vibrate(VIBRATION_PATTERN);
-    } else {
-        console.log("activation needed");
-    }
+const sosButtonClickHandler = () => { 
+    window.navigator.vibrate(VIBRATION_PATTERN);
 }
